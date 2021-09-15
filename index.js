@@ -58,6 +58,7 @@ app.get('/actions', function(req, res){
     let actions = settingsBill.action();
 
     actions.forEach(item => {
+       
         item.timeframes = moment(item.timeframe).fromNow();
     })
     res.render('actions', { actions: settingsBill.action()});
@@ -69,9 +70,12 @@ app.get('/actions/:actionType', function(req, res){
     let actions = settingsBill.action();
 
     actions.forEach(item => {
+        
         item.timeframes = moment(item.timeframe).fromNow();
     })
+    
     res.render('actions', {actions: settingsBill.actionsFor(actionType)});
+    
 });
 
 let PORT = process.env.PORT || 3011;
