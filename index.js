@@ -77,11 +77,7 @@ app.get('/actions/:actionType', function(req, res){
     res.render('actions', {actions: settingsBill.actionsFor(actionType)});
     
 });
-var http = require('http');
-http.createServer(function (req,res){
-    res.writeHead(200, {"Content-Type": "text/plain"});
-    res.end("settings-bill-expressjs\n");
-})
+
 let PORT = process.env.PORT || 3011;
 
 app.listen(PORT, function(){
