@@ -112,7 +112,7 @@ describe('settings-bills', function(){
             assert.strictEqual(6, settingsBill.getCallCostTotal());
             assert.strictEqual(4, settingsBill.getSmsCostTotal());
             assert.strictEqual(10, settingsBill.getOverallTotalSettings());
-           assert.strictEqual('warning', settingsBill.getClassNameLevel(settingsBill.getOverallTotalSettings()))
+            assert.strictEqual('warning', settingsBill.getClassNameLevel(settingsBill.getOverallTotalSettings()))
         });
     });
 
